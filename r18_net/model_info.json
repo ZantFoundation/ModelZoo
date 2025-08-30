@@ -1,0 +1,62 @@
+{
+    "name": "fomo",
+    "model_family": "fomo",
+    "classes": [
+        "fish",
+        "jellyfish",
+        "penguin",
+        "puffin",
+        "shark",
+        "starfish",
+        "stingray"
+    ],
+    "im_size": 640,
+    "task": "counting",
+    "config": {
+        "num_classes": 7,
+        "backbone_config": {
+            "use_pretrained": true,
+            "backbone_url": null,
+            "model_type": "resnet",
+            "in_chans": 3,
+            "depth": 18,
+            "variant": "d",
+            "freeze_at": -1,
+            "num_stages": 4,
+            "freeze_norm": true,
+            "act": "relu",
+            "pretrained": false
+        },
+        "resolution": 640,
+        "hidden_dim": 32,
+        "activation": "relu",
+        "cut_point": "res3",
+        "reduction_factor": 8,
+        "freeze_backbone": false,
+        "loss_type": "focal_loss",
+        "mask_threshold": 0.5,
+        "eos_coeff": 0.1,
+        "pixel_mean": [
+            123.675,
+            116.28,
+            103.53
+        ],
+        "pixel_std": [
+            58.395,
+            57.12,
+            57.375
+        ]
+    },
+    "ref": null,
+    "focoos_model": null,
+    "status": null,
+    "description": "FOMO (Faster Objects, More Objects) is a novel machine learning algorithm that brings object detection to highly constrained devices which lets you count multiple objects and find their location in an image in real-time using up to 30x less processing power and memory than MobileNet SSD or YOLOv5.",
+    "train_args": null,
+    "weights_uri": null,
+    "val_dataset": null,
+    "val_metrics": null,
+    "focoos_version": null,
+    "latency": null,
+    "training_info": null,
+    "updated_at": null
+}
